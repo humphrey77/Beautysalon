@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ukwerebo Umfrei (Humphrey) - Front-end Developer | Captivating Websites that Grow Businesses">
+    <title>Ukwerebo Umfrei | Front-end Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root { --primary: #d4af37; }
+        body { scroll-behavior: smooth; }
+
+        /* Hero - Single Image */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?semt=ais_hybrid&w=740&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 { font-size: 3.5rem; font-weight: bold; }
+        .hero .btn {
+            background: var(--primary); color: #000; font-weight: bold;
+            padding: 14px 45px; font-size: 1.2rem;
+        }
+
+        /* Clean Toggler - Only three bars */
+        .navbar-toggler { border: none !important; background: transparent !important; padding: 0 !important; box-shadow: none !important; }
+        .navbar-toggler:focus { box-shadow: none !important; outline: none !important; }
+        .navbar-toggler-icon {
+            background-image: none !important; width: 28px; height: 3px; background-color: white;
+            position: relative; display: block; margin: 6px auto; transition: all 0.3s;
+        }
+        .navbar-toggler-icon::before, .navbar-toggler-icon::after {
+            content: ""; position: absolute; width: 28px; height: 3px; background-color: white; left: 0; transition: all 0.3s;
+        }
+        .navbar-toggler-icon::before { top: -8px; }
+        .navbar-toggler-icon::after { bottom: -8px; }
+
+        /* Fade-in */
+        .fade-in { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Hover effect for cards */
+        .project-card, .service-card, .skill-card {
+            transition: all 0.4s ease;
+        }
+        .project-card:hover, .service-card:hover, .skill-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
+        }
+
+        /* Skills */
+        .skill-icon { font-size: 3rem; margin-bottom: 10px; }
+
+        /* Bubbly WhatsApp */
+        .whatsapp-float {
+            position: fixed; bottom: 25px; right: 25px;
+            background: #25D366; color: white;
+            width: 65px; height: 65px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 32px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+            z-index: 1000; animation: bubble 2.5s infinite ease-in-out;
+            text-decoration: none;
+        }
+        @keyframes bubble { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+
+        footer { background: #1a1a1a; }
+    </style>
+</head>
+<body>
+
+    <!-- Updated Navbar with Logo -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- Logo + Name -->
+        <a class="navbar-brand d-flex align-items-center fw-bold fs-3" href="#">
+            Humphrey web Solutions
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto gap-3">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Previous Works</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- HERO - Single Image (no carousel) -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="display-3">Ukhurebor Humphrey Odiobhor</h1>
+            <p class="lead mb-2">Front-end Developer</p>
+            <p class="lead mb-4">I build captivating websites that help businesses grow online</p>
+            <a href="#projects" class="btn btn-lg">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-5 bg-light fade-in">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">About Me</h2>
+                    <p class="lead">My name is Ukhurebor Humphrey Odiobhor. I am a graduate of Computer Science (HND) and a passionate Front-end Developer.</p>
+                    <p>I build captivating, mobile-friendly websites using HTML, CSS, Bootstrap, and JavaScript. My goal is simple: help small businesses, hotels, restaurants, lounges, schools, and churches look professional online and grow their customer base.</p>
+                    <p>Whether it’s a one-page site or a full business website, I deliver fast, beautiful, and easy-to-edit solutions.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="DeoFD.jpg" class="img-fluid rounded-circle shadow" style="max-width: 320px;" alt="Ukhurebor Humphrey">
+                    <p class="mt-3 fw-bold">Ukhurebor Humphrey Odiobhor</p>
+                    <p class="text-muted">Front-end Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5 fade-in">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">What I Offer</h2>
+            <div class="row g-4">
+                <div class="col-md-4"><div class="card service-card h-100 shadow-sm text-center"><div class="card-body"><h5>Hotel &amp; Lodge Websites</h5><p class="text-muted">Beautiful booking-ready sites</p></div></div></div>
+                <div class="col-md-4"><div class="card service-card h-100 shadow-sm text-center"><div class="card-body"><h5>Restaurant &amp; Lounge Sites</h5><p class="text-muted">Menu-focused, mobile-first designs</p></div></div></div>
+                <div class="col-md-4"><div class="card service-card h-100 shadow-sm text-center"><div class="card-body"><h5>Grow Your Business Online</h5>
+                            <p class="text-muted">Professional websites that attract more customers</p></div></div></div>
+                <div class="col-md-4"><div class="card service-card h-100 shadow-sm text-center"><div class="card-body"><h5>One-Page Business Sites</h5><p class="text-muted">Fast, modern, conversion-focused</p></div></div></div>
+                <div class="col-md-4"><div class="card service-card h-100 shadow-sm text-center"><div class="card-body"><h5>Custom Front-end Development</h5><p class="text-muted">HTML, CSS, Bootstrap, JavaScript</p></div></div></div>
+                <div class="col-md-4"><div class="card service-card h-100 shadow-sm text-center"><div class="card-body"><h5>Quick Edits &amp; Maintenance</h5><p class="text-muted">I make changes anytime you need</p></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-5 fade-in">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">My Skills</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="skill-card card h-100 shadow-sm p-4">
+                        <div class="skill-icon text-primary"><i class="fab fa-html5"></i></div>
+                        <h5>HTML5</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card card h-100 shadow-sm p-4">
+                        <div class="skill-icon text-info"><i class="fab fa-css3-alt"></i></div>
+                        <h5>CSS3</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card card h-100 shadow-sm p-4">
+                        <div class="skill-icon text-warning"><i class="fab fa-js"></i></div>
+                        <h5>JavaScript</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card card h-100 shadow-sm p-4">
+                        <div class="skill-icon text-purple"><i class="fab fa-bootstrap"></i></div>
+                        <h5>Bootstrap 5</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous Works -->
+    <section id="projects" class="py-5 bg-light fade-in">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Previous Works</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://t4.ftcdn.net/jpg/08/69/97/53/360_F_869975348_HXGi8LdxOP4wGZJkd4NruWYNW2IRrdVZ.jpg" class="card-img-top" alt="Hotel Demo">
+                        <div class="card-body">
+                            <h5>Pearl Suites Hotel</h5>
+                            <p class="text-muted">Luxury hotel website</p>
+                            <a href="https://humphrey77.github.io/hotel/" target="_blank" class="btn btn-outline-dark btn-sm w-100 mt-2">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://nigerianhouseplans.com/wp-content/uploads/2023/05/CS-9250-v2.jpg" class="card-img-top" alt="Lounge Demo">
+                        <div class="card-body">
+                            <h5>Velvet Lounge</h5>
+                            <p class="text-muted">Premium lounge website</p>
+                            <a href="https://humphrey77.github.io/lounge-bar-clubs/" target="_blank" class="btn btn-outline-dark btn-sm w-100 mt-2">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://media.istockphoto.com/id/172188540/photo/stores-and-restaurants-building-exteriors.jpg?s=612x612&w=0&k=20&c=En50meiiulTob6LlAViIAgZkl4lGdWW2hao5U2TStiU=" class="card-img-top" alt="Restaurant Demo">
+                        <div class="card-body">
+                            <h5>Ember Restaurant</h5>
+                            <p class="text-muted">Fine dining restaurant website</p>
+                            <a href="https://humphrey77.github.io/restaurants/" target="_blank" class="btn btn-outline-dark btn-sm w-100 mt-2">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://educationsnapshots.com/wp-content/uploads/sites/4/2019/09/spero-academy-new-school-building.jpg" class="card-img-top" alt="School Demo">
+                        <div class="card-body">
+                            <h5>Horizon Academy</h5>
+                            <p class="text-muted">Modern school website</p>
+                            <a href="https://humphrey77.github.io/schools/" target="_blank" class="btn btn-outline-dark btn-sm w-100 mt-2">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-4 text-muted">All projects are fully responsive and built with clean, maintainable code.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 fade-in">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Let's Work Together</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form action="https://formspree.io/f/mnjoegay" method="POST" class="row g-3">
+                        <div class="col-md-6"><input type="text" name="name" class="form-control" placeholder="Your Name" required></div>
+                        <div class="col-md-6"><input type="email" name="email" class="form-control" placeholder="Email" required></div>
+                        <div class="col-12"><textarea name="message" class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea></div>
+                        <div class="col-12 text-center"><button type="submit" class="btn btn-dark btn-lg px-5">Send Message</button></div>
+                    </form>
+
+                    <div class="text-center mt-5">
+                        <p class="mb-2">Or reach me directly:</p>
+                        <a href="https://wa.me/2347089743895?text=Hello%20Humphrey%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" class="btn btn-success btn-lg me-3">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="tel:07089743895" class="btn btn-outline-dark btn-lg">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Ukhurebor Humphrey Odiobhor</h5>
+                    <p>Front-end Developer</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="#skills" class="text-white text-decoration-none">Skills</a></li>
+                        <li><a href="#projects" class="text-white text-decoration-none">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Follow Me</h5>
+                    <p class="mb-2">
+                        <a href="https://www.instagram.com/ukhureborh/" target="_blank" class="text-white text-decoration-none me-3"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://tiktok.com/@humphreyukhurebor" target="_blank" class="text-white text-decoration-none me-3"><i class="fab fa-tiktok"></i> TikTok</a>
+                        <a href="https://x.com/humphreyukhurebor" target="_blank" class="text-white text-decoration-none"><i class="fab fa-x"></i> X (formally called Twitter)</a>
+                    </p>
+                    <p>Phone: 0708 974 3895</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2026 Ukhurebor Humphrey Odiobhor • Made by Humphrey Web Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/2347089743895?text=Hello%20Humphrey%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fade-in
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
