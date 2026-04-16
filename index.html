@@ -7,14 +7,25 @@
     <title>Elegance Beauty Salon | Premium Beauty & Spa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-    --primary: #d4af37;
-    --secondary: #0d6efd;
-    --dark: #111;
-    --light: #f8f9fa;
+    --primary: #ff4da6;   /* vibrant pink */
+    --secondary: #ffc0cb; /* soft pink */
+    --accent: #ffe4ec;    /* light blush */
+    --dark: #1a1a1a;
+    --light: #fff5f8;     /* soft white/pink */
 }
         body { scroll-behavior: smooth; }
+        body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #fff5f8, #ffffff);
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+}
 
         /* Full Cover Carousel */
         .carousel-item { height: 100vh; position: relative; }
@@ -105,7 +116,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(255, 2, 192, 0.5);
+    color: white;
     backdrop-filter: blur(8px);
     display: none;
     justify-content: center;
@@ -198,6 +210,22 @@ html, body {
 
 body {
     padding-top: 55px;
+}
+
+.navbar {
+    background: linear-gradient(270deg, #ff4da6, #ff80bf, #ff1f8f, #ff66b2);
+    background-size: 800% 800%;
+    animation: pinkGradientMove 10s ease infinite;
+
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(255, 77, 166, 0.25);
+}
+
+/* Smooth animated gradient movement */
+@keyframes pinkGradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* ===== ADVANCED RESPONSIVENESS ===== */
@@ -421,11 +449,26 @@ i:hover {
 
 /* Glass effect when scrolling */
 .navbar.scrolled {
-    background: rgba(20, 20, 20, 0.5) !important;
+    background: rgba(255, 77, 166, 0.85) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 25px rgba(255, 77, 166, 0.35);
 }
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+    color: #ffe4ec !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
 .review-box {
     max-width: 600px;
     background: rgba(255,255,255,0.85);
@@ -551,8 +594,11 @@ section {
 .btn-warning {
     background: var(--primary);
     border: none;
-    color: #111;
+    color: white;
     font-weight: 600;
+}
+.btn-warning:hover {
+    background: #e60073;
 }
 
 .trust-item {
@@ -573,32 +619,7 @@ section {
 }
 
 
-.scrolling-text {
-    overflow: hidden;
-    background: #000;
-    color: #fff;
-    padding: 10px 0;
-}
 
-.scroll-track {
-    display: flex;
-    width: max-content;
-    animation: scrollMove 20s linear infinite;
-}
-
-.scroll-content {
-    white-space: nowrap;
-    padding-right: 50px;
-}
-
-@keyframes scrollMove {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
 
 /* BACK TO TOP BUTTON STYLING */
 #backToTopBtn {
@@ -615,9 +636,10 @@ section {
     line-height: 30px;
     cursor: pointer;
 
-    /* LUXURY GOLD STYLE */
-    background: #d4af37; /* primary gold */
-    color: #111; /* dark icon for contrast */
+    /* LUXURY PINK STYLE */
+    background: #ff4da6;
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 77, 166, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.2);
 
     box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
@@ -627,14 +649,43 @@ section {
 
 /* HOVER STATE */
 #backToTopBtn:hover {
-    background: #b8942f; /* deeper luxury gold */
+    background: #e60073; 
+    box-shadow: 0 12px 25px rgba(255, 77, 166, 0.5);
     transform: translateY(-3px) scale(1.08);
-    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.5);
 }
 
 /* ACTIVE CLICK EFFECT */
 #backToTopBtn:active {
     transform: scale(0.95);
+}
+.service-card:hover {
+    box-shadow: 0 15px 35px rgba(255, 77, 166, 0.3);
+}
+/* NAVBAR PINK */
+.navbar {
+    background: linear-gradient(135deg, #ff4da6, #ff80bf) !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;
+}
+
+/* FOOTER PINK */
+footer {
+    background: linear-gradient(135deg, #ff4da6, #ff80bf);
+    color: #fff;
+}
+
+/* Footer links */
+footer a {
+    color: #fff !important;
+}
+
+/* Optional hover effect */
+footer a:hover,
+.nav-link:hover {
+    color: #ffe4ec !important;
 }
 
     </style>
@@ -671,10 +722,13 @@ section {
                     <a href="https://wa.me/2347089743895?text=Hello%2C%20I%27m%20interested%20in%20your%20beauty%20services.%20My%20name%20is..." class="btn btn-warning btn-lg">
     Book Now on WhatsApp
 </a>
+<p class="mt-2 text-light small">
+No waiting • Direct booking • Instant confirmation
+</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://thumbs.dreamstime.com/b/woman-hand-manicure-treatment-beauty-salon-beauty-parlour-indoor-photo-45717301.jpg" loading="lazy" alt="Spa Treatment">
+                <img src="https://wa.me/2347089743895?text=Hello%2C%20I%27m%20interested%20in%20your%20beauty%20services.%20My%20name%20is..." loading="lazy" alt="Spa Treatment">
                 <div class="hero-text">
                     <h1 class="display-3 fw-bold">Relax • Rejuvenate • Glow</h1>
                     <p class="lead mb-3">Find your perfect balance of relaxation and rejuvenation</p>
@@ -683,37 +737,9 @@ section {
 </a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://hips.hearstapps.com/hmg-prod/images/townhouse-kensington-pedicure-stations-1660133108.jpg" loading="lazy" alt="Nail & Lashes">
-                <div class="hero-text">
-                    <h1 class="display-3 fw-bold">Premium Beauty Services</h1>
-                    <p class="lead mb-3">Experience the finest beauty treatments in a luxurious setting</p>
-                    <a href="https://wa.me/2347089743895?text=Hello%2C%20I%27m%20interested%20in%20your%20beauty%20services.%20My%20name%20is..." class="btn btn-warning btn-lg">
-    Reserve Your Stay
-</a>
-                </div>
-            </div>
         </div>
     </div>
 
-    
-
-<div class="scrolling-text">
-    <div class="scroll-track">
-        <div class="scroll-content">
-            Luxury Beauty • Glowing Skin • Book Your Session Today • Premium Experience • Relax & Shine •
-        </div>
-        <div class="scroll-content">
-            Luxury Beauty • Glowing Skin • Book Your Session Today • Premium Experience • Relax & Shine •
-        </div>
-        <div class="scroll-content">
-            Luxury Beauty • Glowing Skin • Book Your Session Today • Premium Experience • Relax & Shine •
-        </div>
-        <div class="scroll-content">
-            Luxury Beauty • Glowing Skin • Book Your Session Today • Premium Experience • Relax & Shine •
-        </div>
-    </div>
-</div>
 
     <!-- About -->
     <section id="about" class="py-5 bg-light fade-in">
@@ -744,8 +770,9 @@ section {
 <p class="text-muted">Natural lash extensions</p>
 <p class="fw-bold" style="color: var(--primary);">₦15,000</p>
 
-<a href="https://wa.me/2347089743895?text=Hello,%20I%20want%20Classic%20Lashes"
-class="btn btn-warning btn-sm">Book Now</a>
+<button class="btn btn-warning btn-sm" onclick="openBooking('Classic Lashes')">
+Book Now
+</button>
 </div>
                     </div>
                 </div>
@@ -757,8 +784,9 @@ class="btn btn-warning btn-sm">Book Now</a>
 <p class="text-muted">Luxury nail care and spa treatments</p>
 <p class="fw-bold" style="color: var(--primary);">₦12,000</p>
 
-<a href="https://wa.me/2347089743895?text=Hello,%20I%20want%20Pedicure%20&%20Manicure"
-class="btn btn-warning btn-sm">Book Now</a>
+<button class="btn btn-warning btn-sm" onclick="openBooking('Pedicure & Manicure')">
+Book Now
+</button>
 </div>
                     </div>
                 </div>
@@ -770,8 +798,9 @@ class="btn btn-warning btn-sm">Book Now</a>
 <p class="text-muted">Relaxing full body and deep tissue massage</p>
 <p class="fw-bold" style="color: var(--primary);">₦15,000</p>
 
-<a href="https://wa.me/2347089743895?text=Hello,%20I%20want%20Massage"
-class="btn btn-warning btn-sm">Book Now</a>
+<button class="btn btn-warning btn-sm" onclick="openBooking('Massage Therapy')">
+Book Now
+</button>
 </div>
                     </div>
                 </div>
@@ -783,8 +812,9 @@ class="btn btn-warning btn-sm">Book Now</a>
 <p class="text-muted">Professional waxing for all body areas</p>
 <p class="fw-bold" style="color: var(--primary);">₦12,000</p>
 
-<a href="https://wa.me/2347089743895?text=Hello,%20I%20want%20Waxing"
-class="btn btn-warning btn-sm">Book Now</a>
+<button class="btn btn-warning btn-sm" onclick="openBooking('Waxing')">
+Book Now
+</button>
 </div>
                     </div>
                 </div>
@@ -796,8 +826,9 @@ class="btn btn-warning btn-sm">Book Now</a>
 <p class="text-muted">Gel, acrylic nails and beautiful nail art</p>
 <p class="fw-bold" style="color: var(--primary);">₦12,000</p>
 
-<a href="https://wa.me/2347089743895?text=Hello,%20I%20want%20Nails"
-class="btn btn-warning btn-sm">Book Now</a>
+<button class="btn btn-warning btn-sm" onclick="openBooking('Classic Lashes')">
+Book Now
+</button>
 </div>
                     </div>
                 </div>
@@ -809,14 +840,88 @@ class="btn btn-warning btn-sm">Book Now</a>
 <p class="text-muted">Facial treatments and complete spa packages</p>
 <p class="fw-bold" style="color: var(--primary);">₦15,000</p>
 
-<a href="https://wa.me/2347089743895?text=Hello,%20I%20want%20Complete%20Spa%20Package"
-class="btn btn-warning btn-sm">Book Now</a>
+<button class="btn btn-warning btn-sm" onclick="openBooking('Complete Spa Package')">
+Book Now
+</button>
 </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- BOOKING MODAL -->
+<div id="bookingModal" style="
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+">
+  <div style="
+      background:#fff;
+      padding:20px;
+      width:90%;
+      max-width:420px;
+      border-radius:12px;
+  ">
+
+    <h4 class="mb-3">Complete Booking</h4>
+
+    <input id="custName" class="form-control mb-2" placeholder="Your Name">
+    <input id="custPhone" class="form-control mb-2" placeholder="Phone Number">
+    <input id="custPeople" class="form-control mb-2" placeholder="Number of People">
+
+    <input id="custDate" type="date" class="form-control mb-2">
+
+    <select id="custPurpose" class="form-control mb-2">
+      <option value="">Purpose</option>
+      <option>Self Care</option>
+      <option>Birthday Surprise</option>
+      <option>Couples Day Out</option>
+      <option>Girls Hangout</option>
+      <option>Special Occasion</option>
+    </select>
+
+    <select id="custTime" class="form-control mb-2">
+      <option value="">Preferred Time</option>
+      <option>Morning (9AM - 12PM)</option>
+      <option>Afternoon (12PM - 4PM)</option>
+      <option>Evening (4PM - 7PM)</option>
+    </select>
+
+    <select id="custService" class="form-control mb-2">
+      <option>Classic Lashes</option>
+      <option>Pedicure & Manicure</option>
+      <option>Massage</option>
+      <option>Waxing</option>
+      <option>Nails</option>
+      <option>Complete Spa Package</option>
+    </select>
+
+    <p id="servicePrice" class="fw-bold text-center" style="color:#ff4da6;">
+      Price: ₦0
+    </p>
+
+    <button class="btn btn-warning w-100 mb-2" onclick="sendToWhatsApp()">
+      Send Booking
+    </button>
+
+    <button class="btn btn-dark w-100" onclick="closeBooking()">
+      Close
+    </button>
+
+  </div>
+</div>
+
+<!-- <p class="fw-bold text-center" id="servicePrice" style="color:#ff4da6;">
+Price: ₦0
+</p> -->
 
 
     <section class="py-5 bg-light">
@@ -837,37 +942,22 @@ class="btn btn-warning btn-sm">Book Now</a>
         </div>
     </section>
 
-    <section class="py-5 text-center" style="background: var(--dark); color:white;">
+    <section class="py-5 text-center bg-white">
 <div class="container">
 
-<h2 class="fw-bold">Ready to Glow?</h2>
-<p class="mb-4">Book your appointment now</p>
+<h2 class="fw-bold mb-3">No Stress. No Surprises.</h2>
+<p class="mb-4 text-muted">
+Clean environment • Professional staff • 100% satisfaction focus • Relaxed experience
+</p>
 
-<a href="https://wa.me/2347089743895"
-class="btn btn-warning btn-lg">
-Book on WhatsApp
-</a>
+<div class="d-flex justify-content-center gap-4 flex-wrap">
+    <span class="trust-item">✔ Hygienic & Safe</span>
+    <span class="trust-item">✔ Trained Experts</span>
+    <span class="trust-item">✔ Premium Products</span>
+</div>
 
 </div>
 </section>
-
-    <!-- Gallery with Lightbox -->
-    <section id="gallery" class="py-5 fade-in">
-        <div class="container">
-            <h2 class="text-center display-5 fw-bold section-title">Our Gallery</h2>
-            <p class="text-center section-subtitle">See the beauty we create</p>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://static.vecteezy.com/system/resources/thumbnails/053/599/692/small/a-salon-with-a-mirror-and-chairs-photo.jpg" loading="lazy" alt="Lashes" onclick="openLightbox(0)"></div>
-                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://media.istockphoto.com/id/2150776419/photo/woman-at-the-hair-salon.jpg?s=612x612&w=0&k=20&c=9Zkp7ncMDVy2cfPirNkatsBZI5ulUU-CRm0ivBkBT0A=" loading="lazy" alt="Nails" onclick="openLightbox(1)"></div>
-                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://www.lacirugiaestetica.com/wp-content/uploads/2022/12/GettyImages_1227665485.0.jpg" loading="lazy" alt="Facial" onclick="openLightbox(2)"></div>
-                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://media.istockphoto.com/id/2149558252/photo/professional-manicure-studio-work.jpg?s=612x612&w=0&k=20&c=glvc4Ne8mgUAFEJya8k2AvKwhAALB-m8Ewz8DKcobHE=" loading="lazy" alt="Massage" onclick="openLightbox(3)"></div>
-                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://static.vecteezy.com/system/resources/thumbnails/013/898/887/small/woman-enjoying-pedicure-spa-treatment-at-a-beauty-salon-photo.jpg" loading="lazy" alt="Spa" onclick="openLightbox(4)"></div>
-                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://as1.ftcdn.net/v2/jpg/01/14/14/18/1000_F_114141842_E24XVCIfddY3rctVDOO1B6WbWfL4mavq.jpg" loading="lazy" alt="Beauty Treatment" onclick="openLightbox(5)"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- REVIEWS -->
 
 
 <!-- REVIEWS -->
@@ -969,6 +1059,23 @@ Book on WhatsApp
         </div>
     </div>
 </section>
+
+    <!-- Gallery with Lightbox -->
+    <section id="gallery" class="py-5 fade-in">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold section-title">Our Gallery</h2>
+            <p class="text-center section-subtitle">See the beauty we create</p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://static.vecteezy.com/system/resources/thumbnails/053/599/692/small/a-salon-with-a-mirror-and-chairs-photo.jpg" loading="lazy" alt="Lashes" onclick="openLightbox(0)"></div>
+                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://media.istockphoto.com/id/2150776419/photo/woman-at-the-hair-salon.jpg?s=612x612&w=0&k=20&c=9Zkp7ncMDVy2cfPirNkatsBZI5ulUU-CRm0ivBkBT0A=" loading="lazy" alt="Nails" onclick="openLightbox(1)"></div>
+                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://www.lacirugiaestetica.com/wp-content/uploads/2022/12/GettyImages_1227665485.0.jpg" loading="lazy" alt="Facial" onclick="openLightbox(2)"></div>
+                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://media.istockphoto.com/id/2149558252/photo/professional-manicure-studio-work.jpg?s=612x612&w=0&k=20&c=glvc4Ne8mgUAFEJya8k2AvKwhAALB-m8Ewz8DKcobHE=" loading="lazy" alt="Massage" onclick="openLightbox(3)"></div>
+                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://static.vecteezy.com/system/resources/thumbnails/013/898/887/small/woman-enjoying-pedicure-spa-treatment-at-a-beauty-salon-photo.jpg" loading="lazy" alt="Spa" onclick="openLightbox(4)"></div>
+                <div class="col-lg-4 col-md-6 gallery-item"><img src="https://as1.ftcdn.net/v2/jpg/01/14/14/18/1000_F_114141842_E24XVCIfddY3rctVDOO1B6WbWfL4mavq.jpg" loading="lazy" alt="Beauty Treatment" onclick="openLightbox(5)"></div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Lightbox -->
     <div id="lightbox">
@@ -1259,7 +1366,7 @@ function showPopup() {
 
     setTimeout(() => {
         popup.classList.remove('show');
-    }, 1000);
+    }, 2500);
 }
 /* =========================
    NAVBAR SCROLL EFFECT
@@ -1318,24 +1425,7 @@ setInterval(() => {
 
 </script>
 
-<script>
-const scrollBtn = document.getElementById("scrollTopBtn");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        scrollBtn.style.display = "flex";
-    } else {
-        scrollBtn.style.display = "none";
-    }
-});
-
-scrollBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-</script>
 
 <script>
     // backto top button
@@ -1357,6 +1447,84 @@ backToTopBtn.addEventListener("click", function() {
 });
 </script>
 
+<script>
+    let selectedService = "";
+
+function openBooking(service) {
+    selectedService = service;
+    document.getElementById("bookingModal").style.display = "flex";
+    document.getElementById("custService").value = service;
+}
+
+function closeBooking() {
+    document.getElementById("bookingModal").style.display = "none";
+}
+
+const prices = {
+    "Classic Lashes": 15000,
+    "Pedicure & Manicure": 12000,
+    "Massage": 15000,
+    "Waxing": 12000,
+    "Nails": 12000,
+    "Complete Spa Package": 15000
+};
+
+document.getElementById("custService").addEventListener("change", function () {
+    let price = prices[this.value] || 0;
+    document.getElementById("servicePrice").innerText = `Price: ₦${price}`;
+});
+
+function sendToWhatsApp() {
+
+    let name = document.getElementById("custName").value;
+    let phone = document.getElementById("custPhone").value;
+    let people = document.getElementById("custPeople").value;
+    let date = document.getElementById("custDate").value;
+    let purpose = document.getElementById("custPurpose").value;
+    let service = document.getElementById("custService").value;
+    let time = document.getElementById("custTime").value;
+
+    const prices = {
+        "Classic Lashes": 15000,
+        "Pedicure & Manicure": 12000,
+        "Massage": 15000,
+        "Waxing": 12000,
+        "Nails": 12000,
+        "Complete Spa Package": 15000
+    };
+
+    let price = prices[service] || 0;
+
+    // 1. BOOKING MESSAGE (to salon)
+    let bookingMessage = `Hello, I want to book a spa service.%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Service: ${service}%0A
+Price: ₦${price}%0A
+Date: ${date}%0A
+Time: ${time}%0A
+People: ${people}%0A
+Purpose: ${purpose}`;
+
+    // 2. AUTO CONFIRMATION MESSAGE (to client)
+    let confirmMessage = `Hi ${name}, your booking request has been received 💖%0A
+Service: ${service}%0A
+Date: ${date}%0A
+Time: ${time}%0A
+We will confirm your appointment shortly. Thank you for choosing us 💅`;
+
+    let salonNumber = "2347089743895";
+
+    // Open salon chat (booking)
+    window.open(`https://wa.me/${salonNumber}?text=${bookingMessage}`, "_blank");
+
+    // Open client confirmation chat
+    setTimeout(() => {
+        window.open(`https://wa.me/${phone}?text=${confirmMessage}`, "_blank");
+    }, 1500);
+}
+</script>
+
 <!-- Success Popup -->
 <div id="successPopup">
     <div class="popup-box">
@@ -1367,8 +1535,9 @@ backToTopBtn.addEventListener("click", function() {
     </div>
     
     
-    <button id="scrollTopBtn">
-    ↑
-</button>
+   
+
+
+
 </body>
 </html>
